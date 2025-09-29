@@ -7,3 +7,4 @@ df.describe()
 df['sex'].value_counts()
 df['smoker'].value_counts()
 df['region'].value_counts()
+
