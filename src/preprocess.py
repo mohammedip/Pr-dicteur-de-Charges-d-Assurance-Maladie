@@ -19,12 +19,13 @@ df_no_outliers = df_new[(df_new["bmi"] >= lower) & (df_new["bmi"] <= upper)]
 
 df_no_outliers["log_charges"] = np.log(df_no_outliers["charges"])
 
+
 df_encoded = pd.get_dummies(df_no_outliers, columns=["sex", "smoker", "region"], dtype=int)
 
 df_encoded = df_encoded.drop("charges", axis=1)
 
 
-num_cols = ["age", "bmi", "children", "log_charges"]
+num_cols = ["age", "bmi", "children"]
 
 scaler = StandardScaler()
 df_scaled = df_encoded.copy()
