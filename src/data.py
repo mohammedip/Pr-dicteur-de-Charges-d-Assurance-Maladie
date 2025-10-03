@@ -3,4 +3,5 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('data/raw/assurance-maladie.csv')
+df = pd.read_csv('data/assurance-maladie.csv')
+
